@@ -8,7 +8,8 @@
 // include_once 表示「把 db.php 的程式碼複製到這裡」
 // 這樣才能使用 find() 和 update() 函式來操作資料庫
 include_once "db.php";
-
+$photo=find("photos",$_POST['id']);
+unlink($photo['url']);
 delete('photos',$_POST['id']);
 
 // 第10行：編輯完成後，自動跳轉回 upload.php 頁面
