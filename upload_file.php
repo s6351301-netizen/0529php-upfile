@@ -12,11 +12,16 @@ if(!empty($_FILES['file']['tmp_name'])){
  */
     move_uploaded_file($_FILES['file']['tmp_name'], 'upload/'.$_FILES['file']['name']);
     
-    $sql="INSERT INTO `photos`(`url`,`name`,`type`) 
+    /* $sql="INSERT INTO `photos`(`url`,`name`,`type`) 
                VALUES('./upload/{$_FILES['file']['name']}',
                       '{$_POST['name']}',
                       '{$_FILES['file']['type']}')";
-    $pdo->exec($sql);                      
+    $pdo->exec($sql);  */                     
+    insert('photos',[
+                         'url'=>"./upload/{$_FILES['file']['name']}",
+                         'name'=>$_POST['name'],
+                         'type'=>$_FILES['file']['type']
+                     ]);
 
 }
 

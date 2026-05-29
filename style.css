@@ -30,3 +30,164 @@
     text-align: center;
     font-size:32px;
 }
+
+/* ===== del_photo.php 刪除確認頁面的 CSS 樣式 ===== */
+
+/* 刪除確認容器 - 整個確認對話框的外層容器 */
+.delete-container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-left: 5px solid #ff6b6b;
+}
+
+/* 警告圖示 - 頂部的警告符號 */
+.warning-icon{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    color: #ff6b6b;
+    background: #ffe0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-icon svg{
+    width: 50px;
+    height: 50px;
+}
+
+/* 標題 - "刪除確認" */
+.delete-container h1{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 警告訊息 - 提示文字 */
+.warning-message{
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* 要刪除的資訊顯示區域 */
+.student-info{
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.student-info p{
+    margin-bottom: 15px;
+    display: flex;
+    line-height: 1.6;
+}
+
+.student-info p span:first-child{
+    font-weight: bold;
+    color: #333;
+    min-width: 80px;
+}
+
+.student-info p span:last-child{
+    color: #666;
+    word-break: break-word;
+}
+
+/* 消息標題樣式 */
+.school-num{
+    background: #e8f4f8;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #0066cc;
+}
+
+/* 消息內容樣式 */
+.student-name{
+    background: #fff3cd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #856404;
+}
+
+/* 警告提示文字 - "此操作無法復原" */
+.alert-text{
+    background: #fff3cd;
+    color: #856404;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* 按鈕群組容器 */
+.button-group{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.button-group form{
+    display: flex;
+}
+
+.button-group form button{
+    flex: 1;
+}
+
+/* 確認刪除按鈕 */
+.btn-confirm{
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-confirm:hover{
+    background: #ff5252;
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+.btn-confirm:active{
+    transform: scale(0.98);
+}
+
+/* 取消按鈕 */
+.btn-cancel{
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover{
+    background: #d0d0d0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cancel:active{
+    transform: scale(0.98);
+}
